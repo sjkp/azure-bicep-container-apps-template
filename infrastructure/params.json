@@ -7,6 +7,9 @@
         },
         "location": {
             "value": "northeurope"
+        },
+        "containerImage":{
+            "value": "docker.io/nginx:latest"
         }
     }
 }

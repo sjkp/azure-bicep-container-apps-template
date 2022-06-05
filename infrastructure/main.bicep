@@ -2,6 +2,7 @@ targetScope = 'subscription'
 
 param appName string
 param location string
+param containerImage string
 
 resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   name: 'rg-${appName}'
@@ -52,6 +53,6 @@ module aca 'aca.bicep' = {
     lawClientSecret: logs.outputs.clientSecret
     location: location
     name: appName
-    containerImage: 'docker.io/nginx:latest'
+    containerImage: containerImage
   }
 }
