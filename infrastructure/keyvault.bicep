@@ -31,7 +31,7 @@ resource kv 'Microsoft.KeyVault/vaults@2021-11-01-preview' = {
       family: 'A'
       name: 'standard'
     }
-    enablePurgeProtection: false
+    enablePurgeProtection: true
     enableSoftDelete: false
     accessPolicies: accessPolicies
   }
