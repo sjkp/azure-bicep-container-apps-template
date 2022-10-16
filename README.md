@@ -7,7 +7,7 @@ Besides Azure Container Apps, it deploys a storage account and an Azure Key Vaul
 Things you want to modify
 | Location | Usage |
 | - | - |
-|.github/workflows/deploy.yaml| For the github action to work you must set the following Secrets: `AZURE_CREDENTIALS`, `AZURE_SUBSCRIPTION`, and `AZURE_APP_NAME` you can also change the region, if you don't want to use north europe for logging. *If you need an Azure Container App that uses an Azure file share mount you can use the template `main-with-storage.bicep` instead of just main in `deploy.yaml`*
+|.github/workflows/deploy.yaml| For the github action to work you must set the following Github action secrets: `AZURE_CREDENTIALS` (see below how to create a value, it is the full json response of the `az ad sp` command that you should use)  `AZURE_SUBSCRIPTION` (this should contain the subscription Id). *If you need an Azure Container App that uses an Azure file share mount you can use the template `main-with-storage.bicep` instead of just main in `deploy.yaml`*
 | infrastructure/params.json | You can change the `location` of the resource group (all resource are deployed to same location) and the `appName` in here, `appName` is used to generate the name of all the resources and the resource group. You can also change which `containerImage` that you want deployed, it defaults to nginx |
 
 
